@@ -3,8 +3,8 @@ This repository contains tools for different purposes, feel free to use them
 
 # Installation
 - Clone the repository
-    ```
-  bash git clone https://github.com/oxy-Op/python-tools.git
+    ```bash 
+    git clone https://github.com/oxy-Op/python-tools.git
     ```
 - ```cd python-tools```
 - ```pip install -r requirements.txt```
