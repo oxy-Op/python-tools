@@ -8,7 +8,7 @@ This repository contains tools for different purposes, feel free to use them
     ```
 - ```cd python-tools```
 - ```pip install -r requirements.txt```
-- ```python3 <tools.py>```
+- ```python3 -m tools -t [tool]```
 
 #### Credits
 **This Repository is maded by [oxy-Op](https://github.com/oxy-Op)**
