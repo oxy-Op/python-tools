@@ -6,11 +6,10 @@ from rich import print
 from rich.panel import Panel
 from rich.traceback import install
 from rich.columns import Columns
-from json import dumps
 from typing import Type
 
 install(show_locals=True)
-console = Console()
+console: Type[Console] = Console()
 
 
 class Anime:
@@ -115,9 +114,9 @@ def prompt() -> Type[Anime]:
         suggestions = [f"[{i + 1}] {v}" for i, v in enumerate(suggestion_list)]
         columns = Columns(suggestions, expand=True, equal=True)
         print(columns)
-        confirmed_anime = IntPrompt.ask("\nChoose an anime", default=1)
-        print("\nChoosen anime: ", suggestion_list[confirmed_anime - 1])
-        confirmation = Anime(suggestion_list[confirmed_anime - 1])
+        confirmed_anime_index = IntPrompt.ask("\nChoose an anime", default=1)
+        print("\nChoosen anime: ", suggestion_list[confirmed_anime_index - 1])
+        confirmation = Anime(suggestion_list[confirmed_anime_index - 1])
         return confirmation
     except KeyboardInterrupt:
         exit(0)
